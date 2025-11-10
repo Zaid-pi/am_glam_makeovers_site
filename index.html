@@ -8,56 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    .ig strong,
-    .contact-info strong,
-    .socials a[href*="instagram.com"] {
-      color: #84caff;
-    }
-
-    /* Flip card effect */
-    .flip-card {
-      background: transparent;
-      width: 100%;
-      perspective: 1000px;
-      cursor: pointer;
-    }
-
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 250px;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      text-align: center;
-      background: #fff;
-    }
-
-    .flip-card-front .emoji {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .flip-card-back {
-      transform: rotateY(180deg);
-      background: #f8f8f8;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header container">
@@ -95,49 +45,54 @@
       </div>
     </section>
 
-    <!-- Updated Services Section with flip cards -->
     <section class="services section" id="services" aria-label="Services">
       <h2>Our Signature Services</h2>
       <div class="services-grid">
 
+        <!-- Bridal -->
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div class="flip-card-front">
+            <div class="flip-card-front card">
               <div class="emoji">💍</div>
               <h3>Bridal Makeup</h3>
               <p>Elegant, radiant, and camera-ready looks crafted for your big day.</p>
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back card">
               <h3>Bridal Makeup</h3>
               <p>Includes trials, premium long-wear products, and full-day touch-up service.</p>
+              <small class="flip-hint">Tap to flip back</small>
             </div>
           </div>
         </div>
 
+        <!-- Party -->
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div class="flip-card-front">
+            <div class="flip-card-front card">
               <div class="emoji">🎉</div>
               <h3>Party & Occasion</h3>
               <p>Stand out at every celebration with red-carpet glam tailored to your style.</p>
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back card">
               <h3>Party & Occasion</h3>
               <p>Perfect for receptions, birthdays, or festive events with quick glam service.</p>
+              <small class="flip-hint">Tap to flip back</small>
             </div>
           </div>
         </div>
 
+        <!-- Editorial -->
         <div class="flip-card">
           <div class="flip-card-inner">
-            <div class="flip-card-front">
+            <div class="flip-card-front card">
               <div class="emoji">📸</div>
               <h3>Editorial & Photoshoot</h3>
               <p>High-end makeup for magazines, portfolios, and brand campaigns.</p>
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back card">
               <h3>Editorial & Photoshoot</h3>
               <p>Customized looks designed to shine under studio lighting and camera flash.</p>
+              <small class="flip-hint">Tap to flip back</small>
             </div>
           </div>
         </div>
@@ -198,33 +153,6 @@
     </div>
   </footer>
 
-  <script>
-    // DM button opens Instagram chat directly
-    document.addEventListener('DOMContentLoaded', function(){
-      var dmBtn = document.getElementById('dmBtn');
-      if(dmBtn){
-        dmBtn.addEventListener('click', function(){
-          window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
-        });
-      }
-
-      // Flip card interactivity
-      document.querySelectorAll('.flip-card').forEach(card => {
-        card.addEventListener('click', () => {
-          card.classList.toggle('flipped');
-        });
-      });
-
-      // Simple Form submit message
-      var form = document.getElementById('inquiryForm');
-      if(form){
-        form.addEventListener('submit', function(){
-          setTimeout(function(){
-            alert('Thank you — your inquiry was submitted. We will reply shortly.');
-          }, 600);
-        });
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

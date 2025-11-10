@@ -1,27 +1,39 @@
 // Interactivity for DM button, form, and flip cards
-document.addEventListener('DOMContentLoaded', function(){
-  // Instagram button
+document.addEventListener('DOMContentLoaded', function () {
+  // DM button
   const dmBtn = document.getElementById('dmBtn');
-  if(dmBtn){
-    dmBtn.addEventListener('click', function(){
+  if (dmBtn) {
+    dmBtn.addEventListener('click', function () {
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
     });
   }
 
-  // Inquiry form
+  // Inquiry form confirmation
   const form = document.getElementById('inquiryForm');
-  if(form){
-    form.addEventListener('submit', function(){
-      setTimeout(() => {
+  if (form) {
+    form.addEventListener('submit', function () {
+      setTimeout(function () {
         alert('Thank you — your inquiry was submitted. We will reply shortly.');
       }, 600);
     });
   }
 
-  // Flip card functionality
+  // Flip cards: toggle 'flipped' class on click/tap
   document.querySelectorAll('.flip-card').forEach(card => {
-    card.addEventListener('click', function(){
+    // support keyboard accessibility: flip on Enter/Space when focused
+    card.setAttribute('tabindex', '0');
+
+    card.addEventListener('click', function (e) {
+      // prevent flipping when clicking links or buttons inside card (if any)
+      if (e.target.closest('a, button')) return;
       this.classList.toggle('flipped');
+    });
+
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.classList.toggle('flipped');
+      }
     });
   });
 });

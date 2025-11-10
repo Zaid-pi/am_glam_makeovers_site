@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AM Glam Makeovers — Luxury Makeup Artist</title>
+  <meta name="description" content="AM Glam Makeovers — Luxury bridal, party, and editorial makeup. Send an inquiry to book your glam."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    .ig strong,
+    .contact-info strong,
+    .socials a[href*="instagram.com"] {
+      color: #84caff;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="#">AM Glam Makeovers</a>
+    <nav class="nav">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Inquiry</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home" aria-label="Hero section">
+    <div class="hero-inner container">
+      <div class="eyebrow">Luxury Makeup Artist</div>
+      <h1>Transform Every Look Into Timeless Glamour</h1>
+      <p class="lead">Experience luxury artistry that enhances your natural beauty — perfect for brides, parties, and editorial shoots.</p>
+      <div class="cta">
+        <a class="btn primary" href="#portfolio">View Portfolio</a>
+        <a class="btn ghost" href="#contact">Send Inquiry</a>
+      </div>
+      <div class="ig">Follow us on Instagram: <strong>@am_glamstudio_pune_</strong></div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="about section" id="about">
+      <div class="about-grid">
+        <img src="assets/artist.jpg" alt="Makeup artist at work" class="about-photo">
+        <div>
+          <h2>Artistry That Defines You</h2>
+          <div class="gold-line" aria-hidden="true"></div>
+          <p>At <strong>AM Glam Makeovers</strong>, every brushstroke tells a story of confidence, class, and charm. Led by a passionate artist, we specialize in luxury bridal, occasion, and editorial makeup that enhances— not hides—your individuality. Because you deserve to look as flawless as you feel.</p>
+          <p><em>On-location bridal services • Personalized trials • Professional products</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services" aria-label="Services">
+      <h2>Our Signature Services</h2>
+      <div class="services-grid">
+        <article class="card">
+          <div class="emoji">💍</div>
+          <h3>Bridal Makeup</h3>
+          <p>Elegant, radiant, and camera-ready looks crafted for your big day. Custom trials & packages available.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">🎉</div>
+          <h3>Party & Occasion</h3>
+          <p>Stand out at every celebration with red-carpet glam tailored to your style and outfit.</p>
+        </article>
+        <article class="card">
+          <div class="emoji">📸</div>
+          <h3>Editorial & Photoshoot</h3>
+          <p>High-end makeup for magazines, portfolios, and brand campaigns — designed to shine on camera.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio" aria-label="Portfolio">
+      <h2>Glam Gallery</h2>
+      <div class="gallery-grid">
+        <a class="gallery-item" href="assets/look1.jpg" target="_blank"><img src="assets/look1.jpg" alt="Makeup look 1"></a>
+        <a class="gallery-item" href="assets/look2.jpg" target="_blank"><img src="assets/look2.jpg" alt="Makeup look 2"></a>
+        <a class="gallery-item" href="assets/look3.jpg" target="_blank"><img src="assets/look3.jpg" alt="Makeup look 3"></a>
+        <a class="gallery-item" href="assets/look4.jpg" target="_blank"><img src="assets/look4.jpg" alt="Makeup look 4"></a>
+        <a class="gallery-item" href="assets/look5.jpg" target="_blank"><img src="assets/look5.jpg" alt="Makeup look 5"></a>
+        <a class="gallery-item" href="assets/look6.jpg" target="_blank"><img src="assets/look6.jpg" alt="Makeup look 6"></a>
+      </div>
+      <div class="center">
+        <a class="btn ghost" href="https://www.instagram.com/am_glamstudio_pune_/" target="_blank">View More on Instagram</a>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-label="Contact">
+      <h2>Let’s Create Your Perfect Look</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Send an inquiry with your event details and we’ll respond with availability and a tailored package. Prefer Instagram? DM us at <strong>@am_glamstudio_pune_</strong>.</p>
+          <ul>
+            <li>Premium, long-wear products</li>
+            <li>Personalized trials & consultations</li>
+            <li>On-location services for weddings</li>
+          </ul>
+        </div>
+
+        <form id="inquiryForm" class="contact-form" method="POST" action="https://formspree.io/f/FORM_ID">
+          <label class="field"><input name="name" type="text" placeholder="Your name" required></label>
+          <label class="field"><input name="event" type="text" placeholder="Event / Occasion (eg. Bridal)" required></label>
+          <label class="field"><input name="date" type="date" placeholder="Event date"></label>
+          <label class="field"><input name="contact" type="text" placeholder="WhatsApp or Email"></label>
+          <label class="field"><textarea name="message" rows="4" placeholder="Tell us about the look you want..."></textarea></label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Inquiry</button>
+            <button class="btn ghost" type="button" id="dmBtn">DM on Instagram</button>
+          </div>
+          <p class="form-note" id="formNote">Form will send via Formspree. Replace <code>FORM_ID</code> with your ID or connect to your backend.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 AM Glam Makeovers — Luxury. Confidence. Artistry.</div>
+      <div class="socials">
+        <a href="https://www.instagram.com/am_glamstudio_pune_/" target="_blank">Instagram</a> • 
+        <a href="#contact">Inquiry</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // DM button opens Instagram chat directly
+    document.getElementById('dmBtn').addEventListener('click', function() {
+      window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
+    });
+  </script>
+</body>
+</html>

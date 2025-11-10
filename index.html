@@ -55,21 +55,52 @@
     <section class="services section" id="services" aria-label="Services">
       <h2>Our Signature Services</h2>
       <div class="services-grid">
-        <article class="card">
-          <div class="emoji">💍</div>
-          <h3>Bridal Makeup</h3>
-          <p>Elegant, radiant, and camera-ready looks crafted for your big day. Custom trials & packages available.</p>
-        </article>
-        <article class="card">
-          <div class="emoji">🎉</div>
-          <h3>Party & Occasion</h3>
-          <p>Stand out at every celebration with red-carpet glam tailored to your style and outfit.</p>
-        </article>
-        <article class="card">
-          <div class="emoji">📸</div>
-          <h3>Editorial & Photoshoot</h3>
-          <p>High-end makeup for magazines, portfolios, and brand campaigns — designed to shine on camera.</p>
-        </article>
+
+        <!-- Bridal Makeup Flip Card -->
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front card">
+              <div class="emoji">💍</div>
+              <h3>Bridal Makeup</h3>
+              <p>Elegant, radiant, and camera-ready looks crafted for your big day. Tap to see details.</p>
+            </div>
+            <div class="flip-back card">
+              <h3>Bridal Makeup Details</h3>
+              <p>Includes consultation, trials, HD makeup, hairstyle, and on-location service. Long-lasting premium products used for a flawless finish.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Party Makeup Flip Card -->
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front card">
+              <div class="emoji">🎉</div>
+              <h3>Party & Occasion</h3>
+              <p>Stand out at every celebration with red-carpet glam. Tap to see details.</p>
+            </div>
+            <div class="flip-back card">
+              <h3>Party Makeup Details</h3>
+              <p>Includes glam or subtle look options, lashes, and hairstyling. Ideal for engagements, receptions, or festive events.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Makeup Flip Card -->
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front card">
+              <div class="emoji">📸</div>
+              <h3>Editorial & Photoshoot</h3>
+              <p>High-end makeup for magazines and brand campaigns. Tap to see details.</p>
+            </div>
+            <div class="flip-back card">
+              <h3>Editorial Makeup Details</h3>
+              <p>Professional makeup designed to complement lighting and photography. Suitable for portfolio, brand, or commercial shoots.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -126,11 +157,6 @@
     </div>
   </footer>
 
-  <script>
-    // DM button opens Instagram chat directly
-    document.getElementById('dmBtn').addEventListener('click', function() {
-      window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

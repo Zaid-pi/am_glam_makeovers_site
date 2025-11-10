@@ -14,6 +14,49 @@
     .socials a[href*="instagram.com"] {
       color: #84caff;
     }
+
+    /* Flip card effect */
+    .flip-card {
+      background: transparent;
+      width: 100%;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      background: #fff;
+    }
+
+    .flip-card-front .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      background: #f8f8f8;
+    }
   </style>
 </head>
 <body>
@@ -46,58 +89,62 @@
         <div>
           <h2>Artistry That Defines You</h2>
           <div class="gold-line" aria-hidden="true"></div>
-          <p>At <strong>AM Glam Makeovers</strong>, every brushstroke tells a story of confidence, class, and charm. Led by a passionate artist, we specialize in luxury bridal, occasion, and editorial makeup that enhances— not hides—your individuality. Because you deserve to look as flawless as you feel.</p>
+          <p>At <strong>AM Glam Makeovers</strong>, every brushstroke tells a story of confidence, class, and charm. Led by a passionate artist, we specialize in luxury bridal, occasion, and editorial makeup that enhances—not hides—your individuality. Because you deserve to look as flawless as you feel.</p>
           <p><em>On-location bridal services • Personalized trials • Professional products</em></p>
         </div>
       </div>
     </section>
 
+    <!-- Updated Services Section with flip cards -->
     <section class="services section" id="services" aria-label="Services">
-  <h2>Our Signature Services</h2>
-  <div class="services-grid">
-    
-    <!-- Bridal Makeup Card -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front card">
-          <div class="emoji">💍</div>
-          <h3>Bridal Makeup</h3>
-        </div>
-        <div class="flip-card-back card">
-          <p>Elegant, radiant, and camera-ready looks crafted for your big day. Custom trials & packages available.</p>
-        </div>
-      </div>
-    </div>
+      <h2>Our Signature Services</h2>
+      <div class="services-grid">
 
-    <!-- Party & Occasion Card -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front card">
-          <div class="emoji">🎉</div>
-          <h3>Party & Occasion</h3>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="emoji">💍</div>
+              <h3>Bridal Makeup</h3>
+              <p>Elegant, radiant, and camera-ready looks crafted for your big day.</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Bridal Makeup</h3>
+              <p>Includes trials, premium long-wear products, and full-day touch-up service.</p>
+            </div>
+          </div>
         </div>
-        <div class="flip-card-back card">
-          <p>Stand out at every celebration with red-carpet glam tailored to your style and outfit.</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Editorial Card -->
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front card">
-          <div class="emoji">📸</div>
-          <h3>Editorial & Photoshoot</h3>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="emoji">🎉</div>
+              <h3>Party & Occasion</h3>
+              <p>Stand out at every celebration with red-carpet glam tailored to your style.</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Party & Occasion</h3>
+              <p>Perfect for receptions, birthdays, or festive events with quick glam service.</p>
+            </div>
+          </div>
         </div>
-        <div class="flip-card-back card">
-          <p>High-end makeup for magazines, portfolios, and brand campaigns — designed to shine on camera.</p>
-        </div>
-      </div>
-    </div>
 
-  </div>
-</section>
-    
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="emoji">📸</div>
+              <h3>Editorial & Photoshoot</h3>
+              <p>High-end makeup for magazines, portfolios, and brand campaigns.</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Editorial & Photoshoot</h3>
+              <p>Customized looks designed to shine under studio lighting and camera flash.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section class="portfolio section" id="portfolio" aria-label="Portfolio">
       <h2>Glam Gallery</h2>
       <div class="gallery-grid">
@@ -151,6 +198,33 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // DM button opens Instagram chat directly
+    document.addEventListener('DOMContentLoaded', function(){
+      var dmBtn = document.getElementById('dmBtn');
+      if(dmBtn){
+        dmBtn.addEventListener('click', function(){
+          window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
+        });
+      }
+
+      // Flip card interactivity
+      document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flipped');
+        });
+      });
+
+      // Simple Form submit message
+      var form = document.getElementById('inquiryForm');
+      if(form){
+        form.addEventListener('submit', function(){
+          setTimeout(function(){
+            alert('Thank you — your inquiry was submitted. We will reply shortly.');
+          }, 600);
+        });
+      }
+    });
+  </script>
 </body>
 </html>

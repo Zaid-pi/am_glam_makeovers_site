@@ -1,46 +1,46 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
 
-  // Visit on Instagram button (optional)
+  /* DM Button in hero or header (if exists) */
   const dmBtn = document.getElementById('dmBtn');
   if (dmBtn) {
-    dmBtn.addEventListener('click', function (e) {
+    dmBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
     });
   }
 
-  // DM on Instagram button (form button)
+  /* DM Button in form */
   const dmBtn2 = document.getElementById('dmBtn2');
   if (dmBtn2) {
-    dmBtn2.addEventListener('click', function (e) {
+    dmBtn2.addEventListener('click', (e) => {
       e.preventDefault();
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
     });
   }
 
-  // Inquiry form confirmation
+  /* Form submitted alert */
   const form = document.getElementById('FORM_ID');
   if (form) {
-    form.addEventListener('submit', function () {
-      setTimeout(function () {
-        alert('Thank you — your inquiry was submitted. We will reply shortly.');
-      }, 600);
+    form.addEventListener('submit', () => {
+      setTimeout(() => {
+        alert('Thank you — your inquiry was submitted successfully!');
+      }, 400);
     });
   }
 
-  // Flip card functionality
+  /* Flip Card Animation */
   document.querySelectorAll('.flip-card').forEach(card => {
     card.setAttribute('tabindex', '0');
 
-    card.addEventListener('click', function (e) {
+    card.addEventListener('click', (e) => {
       if (e.target.closest('a, button')) return;
-      this.classList.toggle('flipped');
+      card.classList.toggle('flipped');
     });
 
-    card.addEventListener('keydown', function (e) {
+    card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        this.classList.toggle('flipped');
+        card.classList.toggle('flipped');
       }
     });
   });

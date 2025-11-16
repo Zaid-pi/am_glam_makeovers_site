@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
     });
   }
+});
 
   // DM on instagram button
   document.addEventListener('DOMContentLoaded', function () {
@@ -16,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
     });
   }
+  });
+  
 
   // Inquiry form confirmation
   const form = document.getElementById('FORM_ID');

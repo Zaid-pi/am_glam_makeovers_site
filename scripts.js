@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // DM on instagram button (form button)
-  const dmBtn2 = document.getElementById('dmBtn2');
-  if (dmBtn2) {
-    dmBtn2.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
-    });
-  }
+  // const dmBtn2 = document.getElementById('dmBtn2');
+  // if (dmBtn2) {
+  //   dmBtn2.addEventListener('click', function (e) {
+  //     e.preventDefault();
+  //     window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
+  //   });
+  // }
 
   // Inquiry form confirmation
   const form = document.getElementById('FORM_ID');
@@ -46,3 +46,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 }); // ✅ THIS WAS MISSING IN YOUR ORIGINAL SCRIPT
+
+document.addEventListener('DOMContentLoaded', function () {
+ const dmBtn2 = document.getElementById('dmBtn2');
+  if (dmBtn2) {
+    dmBtn2.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
+    });
+  }});

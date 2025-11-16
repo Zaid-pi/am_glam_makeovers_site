@@ -35,8 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Handles click/tap event
     card.addEventListener('click', (e) => {
-      // Prevent flip if an interactive element inside the card is clicked (like a future link/button)
-      if (e.target.closest('a, button')) return; 
+      // Check if the click was on the flip button (or the small hint text on the back).
+      if (e.target.closest('.flip-btn') || e.target.closest('.flip-hint')) { 
+        card.classList.toggle('flipped');
+        return;
+      }
+      // Fallback: If the user clicks anywhere else on the card (not the button/hint), flip it anyway.
       card.classList.toggle('flipped');
     });
 

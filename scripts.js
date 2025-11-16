@@ -28,19 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Flip Card Animation FIX */
+  /* Flip Card Animation */
   document.querySelectorAll('.flip-card').forEach(card => {
     // Makes card keyboard accessible
     card.setAttribute('tabindex', '0');
 
-    // Handles click/tap event
+    // Handles click/tap event for flip
     card.addEventListener('click', (e) => {
-      // Check if the click was on the flip button (or the small hint text on the back).
-      if (e.target.closest('.flip-btn') || e.target.closest('.flip-hint')) { 
-        card.classList.toggle('flipped');
-        return;
-      }
-      // Fallback: If the user clicks anywhere else on the card (not the button/hint), flip it anyway.
+      // Prevent flip if an actual link or form button inside the card is clicked (though none exist now).
+      if (e.target.closest('a, button')) return; 
       card.classList.toggle('flipped');
     });
 

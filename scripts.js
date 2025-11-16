@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // DM on instagram button
   document.addEventListener('DOMContentLoaded', function () {
-  const dmBtn = document.getElementById('dmBtn2');
+  const dmBtn2 = document.getElementById('dmBtn2');
   if (dmBtn2) {
     dmBtn2.addEventListener('click', function () {
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');

@@ -1,7 +1,16 @@
 // Interactivity for DM button, form, and flip cards
 document.addEventListener('DOMContentLoaded', function () {
-  // DM button
+  // Visit on instagram button
   const dmBtn = document.getElementById('dmBtn');
+  if (dmBtn) {
+    dmBtn.addEventListener('click', function () {
+      window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');
+    });
+  }
+
+  // DM on instagram button
+  document.addEventListener('DOMContentLoaded', function () {
+  const dmBtn = document.getElementById('dmBtn2');
   if (dmBtn) {
     dmBtn.addEventListener('click', function () {
       window.open('https://www.instagram.com/am_glamstudio_pune_/', '_blank');

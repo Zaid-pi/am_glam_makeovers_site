@@ -70,8 +70,8 @@ h1{font-family:'Playfair Display',serif;font-size:42px;margin:12px 0;color:var(-
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* hide when flipped away */
+  height: 100%;  /* ← FIX: ensures equal height */
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 12px;
   padding: 18px;
@@ -83,6 +83,7 @@ h1{font-family:'Playfair Display',serif;font-size:42px;margin:12px 0;color:var(-
   background: #fff;
   color: var(--char);
 }
+
 
 /* front face styling (emoji etc) */
 .flip-card-front .emoji {

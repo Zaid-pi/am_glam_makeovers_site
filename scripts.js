@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Inquiry form confirmation
-  const form = document.getElementById('inquiryForm');
+  const form = document.getElementById('FORM_ID');
   if (form) {
     form.addEventListener('submit', function () {
       setTimeout(function () {
